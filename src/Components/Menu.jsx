@@ -17,7 +17,6 @@ color: ${({ theme }) => theme.text};
 font-size: 14px;
 position: sticky;
 top: 0;
-left: 0;
 `;
 const Wrapper = styled.div`
 padding: 18px 26px;

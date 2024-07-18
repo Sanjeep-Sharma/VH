@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import styled, { ThemeProvider }from "styled-components";
+import styled, { ThemeProvider, createGlobalStyle }from "styled-components";
 import Menu from "./Components/Menu";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -9,6 +9,12 @@ import Video from './Pages/Video';
 import Home from './Pages/Home';
 import SignIn from "./Pages/SignIn"
 import ChannelPage from './Pages/ChannelPage';
+
+const GlobalStyle = createGlobalStyle`
+body {
+  margin: 0;
+  padding: 0;
+}`
 
 const Container = styled.div`
  display: flex;
@@ -24,6 +30,8 @@ padding: 22px 96px;
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   return (
+    <>
+    <GlobalStyle/>
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
     <Container>
       <BrowserRouter>
@@ -46,6 +54,7 @@ function App() {
       </BrowserRouter>
     </Container>
     </ThemeProvider>
+    </>
     );
 }
 export default App;

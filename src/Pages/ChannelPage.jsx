@@ -29,12 +29,14 @@ const ChannelDetails = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: ${({ theme }) => theme.text};
 `;
 
 const ChannelName = styled.h2`
   font-size: 20px;
   font-weight: bold;
   margin: auto;
+  color: ${({ theme }) => theme.text};
 `;
 const ChannelStats = styled.div`
   display: flex;
@@ -43,17 +45,20 @@ const ChannelStats = styled.div`
 const ChannelUsername = styled.span`
   font-size: 18px;
   color: #666;
+  color: ${({ theme }) => theme.text};
 `;
 
 const ChannelSubscriberCount = styled.span`
   font-size: 18px;
   color: #666;
   margin-right: 20px;
+  color: ${({ theme }) => theme.text};
 `;
 
 const ChannelVideoCount = styled.span`
   font-size: 18px;
   color: #666;
+  color: ${({ theme }) => theme.text};
 `;
 
 const SubscribeButton = styled.button`
@@ -70,9 +75,11 @@ cursor: pointer;
 const Bio = styled.p`
   font-size: 16px;
   margin: 10px 0px;
+  color: ${({ theme }) => theme.text};
 `;
 
 const VideoGrid = styled.div`
+margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -97,17 +104,20 @@ const VideoThumbnail = styled.img`
 const VideoTitle = styled.h3`
   font-size: 18px;
   margin-bottom: 10px;
+  color: ${({ theme }) => theme.text};
 `;
 
 const VideoViewsCount = styled.span`
   font-size: 14px;
   color: #666;
   margin-right: 20px;
+  color: ${({ theme }) => theme.text};
 `;
 
 const VideoReleaseDate = styled.span`
   font-size: 14px;
   color: #666;
+  color: ${({ theme }) => theme.text};
 `;
 
 const ChannelPage = () => {
